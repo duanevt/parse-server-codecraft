@@ -15,10 +15,10 @@ var dashboard = new ParseDashboard({
 	"allowInsecureHTTP": true,
   "apps": [
     {
-      "serverURL": databaseUri || "http://localhost:1337/parse",
+      "serverURL": process.evn.SERVER_URL || "http://localhost:1337/parse",
       "appId": process.env.APP_ID || "myAppId",
       "masterKey": process.env.MASTER_KEY || "myMasterKey",
-      "appName": "MeanParseDash"
+      "appName": process.env.APP_NAME || "MeanParseDash"
     }
   ],
 	"users": [{
