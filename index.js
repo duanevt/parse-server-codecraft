@@ -10,7 +10,7 @@ if (!databaseUri) {
 	console.log('DATABASE_URI not specified, falling back to localhost.');
 }
 
-//var allowInsecureHTTP = true;
+var allowInsecureHTTP = true;
 var dashboard = new ParseDashboard({
 	"allowInsecureHTTP": true,
   "apps": [
@@ -29,7 +29,7 @@ var dashboard = new ParseDashboard({
 				"appId": "MeanParseDash" //REPLACE WITH YOURS
 		}]
 }]
-}, config.allowInsecureHTTP);
+}, allowInsecureHTTP);
 
 var api = new ParseServer({
 	//**** General Settings ****//
